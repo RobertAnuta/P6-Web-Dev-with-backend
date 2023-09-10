@@ -12,7 +12,7 @@ export class SaucesService {
   sauces$ = new Subject<Sauce[]>();
 
   constructor(private http: HttpClient,
-              private auth: AuthService) {}
+    private auth: AuthService) { }
 
   getSauces() {
     this.http.get<Sauce[]>('http://localhost:3000/api/sauces').pipe(
