@@ -1,7 +1,3 @@
-//mondo connection: mongodb+srv://anutar:<password>@cluster0.ptmajah.mongodb.net/?retryWrites=true&w=majority
-//anutar: R@bert123
-// R%40bert123
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
