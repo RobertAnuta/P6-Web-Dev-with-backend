@@ -4,14 +4,19 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "type": "node",
             "request": "launch",
-            "name": "Debug Program",
+            "name": "Launch Program",
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/backend/controllers/sauce.js"
+            "program": "${workspaceFolder}/backend/server.js",
+            "env": {
+                "DB_CONNECT_STR":"mongodb+srv://anutar:R%40bert123@cluster0.ptmajah.mongodb.net/",
+                 "JWT_SECRET":"sghiurhcgkssdhfkjdhvnsjkdfghgxnfkjghshvklfhcnasdkfhankdachfnadkjgvgvnsffjkchn"
+            }
         }
     ]
 }

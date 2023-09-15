@@ -7,12 +7,12 @@ const saucesRoutes = require('./routes/sauces')
 const userRoutes = require('./routes/user')
 
 const app = express()
+
+// Mongoose Auth
 try {
-  mongoose
-    .connect('mongodb+srv://anutar:R%40bert123@cluster0.ptmajah.mongodb.net/')
-    .then(() => {
-      console.log('Successfully connected to MongoDB Atlas!')
-    })
+  mongoose.connect(process.env.DB_CONNECT_STR).then(() => {
+    console.log('Successfully connected to MongoDB Atlas!')
+  })
 } catch (error) {
   console.log('Unable to connect to MongoDB Atlas!')
   console.error(error)
